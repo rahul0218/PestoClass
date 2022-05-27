@@ -1,7 +1,7 @@
 //? What is memeoization
 //!
 
-const memoiza = require('lodash/memoize');
+//const memoiza = require('lodash.memoize');
 
 function fib(n){
     if(n<2){
@@ -9,5 +9,10 @@ function fib(n){
     }
     return fib(n-1)+fib(n-2);
 }
+console.time();
+console.log(fib(10));
+console.timeEnd();
 
-fib(5);
+console.time();
+console.log(fib(11));
+console.timeEnd();
