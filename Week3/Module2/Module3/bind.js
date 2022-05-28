@@ -29,5 +29,9 @@ greet.call(cats);
 greet.call(dogs);
 
 
+//Apply
+var number = [5, 6, 90, 8];
+var max = Math.max.apply(null, number);
+console.log(max);
 
 

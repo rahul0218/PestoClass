@@ -103,21 +103,57 @@
 
 //Q6
 
-function creatIncrement(){
-    let count =0;
-    function increment(){
-        count++;
-    }
+// function creatIncrement(){
+//     let count =0;
+//     function increment(){
+//         count++;
+//     }
 
-    let message = `Count is ${count}`;
-    function log(){
-        console.log(message);
+//     let message = `Count is ${count}`;
+//     function log(){
+//         console.log(message);
+//     }
+//     return[increment, log];
+// }
+
+// const [increment, log] = creatIncrement();
+// increment();
+// increment();
+// increment();
+// log();
+// function createStack() {
+//   return {
+//     items: [],
+//     push(item) {
+//       this.items.push(item);
+//     },
+//     pop() {
+//       return this.items.pop();
+//     }
+//   };
+// }
+// const stack = createStack();
+// stack.push(10);
+// stack.push(5);
+// stack.pop(); // => 5
+// console.log(stack.items);
+
+
+
+
+function createStack() {
+  const items = [];
+  return {
+    push(item) {
+      items.push(item);
+    },
+    pop() {
+      return items.pop();
     }
-    return[increment, log];
+  };
 }
-
-const [increment, log] = creatIncrement();
-increment();
-increment();
-increment();
-log();
+const stack = createStack();
+console.log(stack.push(10));
+console.log(stack.push(5));
+console.log(stack.pop());
+console.log(stack.items);
