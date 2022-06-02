@@ -67,6 +67,7 @@
 
 
 //create a new object with a new prototype
+
 var proto = {
     describe: function(){
         return 'name: ' +this.name;
