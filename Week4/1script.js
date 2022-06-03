@@ -6,9 +6,9 @@ const getNumber = new Promise((resolve, reject)=>{
 
 })
 getNumber.then(
-    (val)=>console.log(`val - ${val}`),
-    (val)=>console.error(`val - ${val}`)
-);
+    (val)=>console.log(`val - ${val}`))
+    .catch((val)=>console.error(`val - ${val}`))
+    .finally(()=>console.log(`finally`));
 //console.log(randomNumber);
 
 
