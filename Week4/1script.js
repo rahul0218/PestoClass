@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // const getNumber = new Promise((resolve, reject)=>{
 //    const randomNumber = parseInt(Math.random() *100);
 //     setTimeout(()=>{
@@ -9,6 +10,19 @@
 //     (val)=>console.log(`val - ${val}`),
 //     (val)=>console.error(`val - ${val}`)
 // );
+=======
+const getNumber = new Promise((resolve, reject)=>{
+   const randomNumber = parseInt(Math.random() *100);
+    setTimeout(()=>{
+        return (randomNumber % 5 === 0 ? reject (`rejected  number ${randomNumber}`) : resolve (`Resolve number ${randomNumber}`));
+    },randomNumber * 10);
+
+})
+getNumber.then(
+    (val)=>console.log(`val - ${val}`))
+    .catch((val)=>console.error(`val - ${val}`))
+    .finally(()=>console.log(`finally`));
+>>>>>>> 3908d30a4446205d6135eb0c81cb0c1a39eb2a03
 //console.log(randomNumber);
 
 
