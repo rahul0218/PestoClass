@@ -1,14 +1,14 @@
-const getNumber = new Promise((resolve, reject)=>{
-   const randomNumber = parseInt(Math.random() *100);
-    setTimeout(()=>{
-        return (randomNumber % 5 === 0 ? reject (`rejected  number ${randomNumber}`) : resolve (`Resolve number ${randomNumber}`));
-    },randomNumber * 10);
+// const getNumber = new Promise((resolve, reject)=>{
+//    const randomNumber = parseInt(Math.random() *100);
+//     setTimeout(()=>{
+//         return (randomNumber % 5 === 0 ? reject (`rejected  number ${randomNumber}`) : resolve (`Resolve number ${randomNumber}`));
+//     },randomNumber * 10);
 
-})
-getNumber.then(
-    (val)=>console.log(`val - ${val}`),
-    (val)=>console.error(`val - ${val}`)
-);
+// })
+// getNumber.then(
+//     (val)=>console.log(`val - ${val}`),
+//     (val)=>console.error(`val - ${val}`)
+// );
 //console.log(randomNumber);
 
 
@@ -34,3 +34,14 @@ getNumber.then(
 
 // him.initialize("Ada", 45);
 // him.teach("Inheritance");
+
+var proto={
+    describe: function(){
+        return 'name: ' + this.name;
+    },
+};
+
+var obj = Object.create(proto);
+obj.name='obj';
+//console.log(obj);
+console.log(obj.describe());
